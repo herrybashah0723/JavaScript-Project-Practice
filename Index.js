@@ -12,7 +12,7 @@
 
 
 
-const multiplyFunc = [4,5,3,6,2,7,9];
+const multiplyFunc = [4,6,3,6,2,7,9];
 
 function multFunc(number, index){
     console.log("Index is", index);
