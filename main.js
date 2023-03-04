@@ -22,9 +22,38 @@
 
 // -------------Functions
 
-function coffeeOrder(drink) {
-    return `your ${drink} is on its way!`
+// function coffeeOrder(drink) {
+//     return `your ${drink} is on its way!`
+// }
+
+// const order = coffeeOrder('Latte')
+// console.log(order);
+
+
+
+
+
+//--------------Small Calculator
+
+const value1 = prompt("Enter your first value in Numbers!");
+const value2 = prompt("Enter your Second value in Numbers!");
+
+let operator = prompt("Chose your Operator (+, -, *, %, /)")
+
+function calculator(a, b, c) {
+    if(c === "-"){
+        console.log(a - b);
+    } else if (c === "*"){
+        console.log(a * b);
+        return a*b;
+    } else if (c === "/"){
+        console.log(a / b);
+    } else if (c === "%"){
+        console.log(a % b);
+    } else {
+        console.log(a + b);
+    }
 }
 
-const order = coffeeOrder('Latte')
-console.log(order);
+let cal2 = calculator(value1,value2, operator);
+console.log(value1 + operator + value2 + " = " + cal2 );
