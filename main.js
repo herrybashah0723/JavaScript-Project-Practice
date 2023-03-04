@@ -1,15 +1,18 @@
-const multiplyFunc = [4,5,3,6,2,7,9];
+// ----------while lopp Game
 
-function multFunc(number, index){
-    console.log("Index is", index);
-    console.log(`${number}*2=`, number*2);
+const maxValue = 10;
+const randomNumber = Math.floor(Math.random()*maxValue) + 1;
+let status = false;
+
+while (!status) {
+    let userInput = prompt("Guess a number between 1 and " + maxValue)
+    userInput = Number(userInput);
+    if (userInput === randomNumber){
+        status = true;
+        console.log("You won! The number was " + randomNumber);
+    } else if ( userInput > randomNumber ) {
+        console.log("Sorry, your guess is too high.");
+    } else {
+        console.log("Sorry, your guess was too low.");
+    }
 }
-
-for (let i = 0; i < multiplyFunc.length; i++) {
-    multFunc(multiplyFunc[i], i)
-}
-
-multiplyFunc.forEach(function(number, index){
-    console.log("Index is", index);
-    console.log(`${number}*2=`, number*2);
-});
